@@ -25,21 +25,13 @@ go run main.go
 Windows
 
 ```bash
-docker run -d --name minio `  -p 9000:9000 -p 9001:9001`
--e "MINIO_ROOT_USER=myadmin" `  -e "MINIO_ROOT_PASSWORD=mysecretpassword"`
--v C:\minio-data:/data `
-minio/minio server /data --console-address ":9001"
+docker run -d --name minio  -p 9000:9000 -p 9001:9001 -e "MINIO_ROOT_USER=myadmin"  -e "MINIO_ROOT_PASSWORD=mysecretpassword" -v C:\minio-data:/data minio/minio server /data --console-address ":9001"
 ```
 
 macOS
 
 ```bash
-docker run -d --name minio \
-  -p 9000:9000 -p 9001:9001 \
-  -e "MINIO_ROOT_USER=myadmin" \
-  -e "MINIO_ROOT_PASSWORD=mysecretpassword" \
-  -v ~/minio-data:/data \
-  minio/minio server /data --console-address ":9001"
+docker run -d --name minio -p 9000:9000 -p 9001:9001 -e "MINIO_ROOT_USER=myadmin" -e "MINIO_ROOT_PASSWORD=mysecretpassword" -v ~/minio-data:/data minio/minio server /data --console-address ":9001"
 ```
 
 2. Настройка MinIO
@@ -57,23 +49,13 @@ docker exec -it minio mc anonymous set public myminio/user-uploads
 Windows
 
 ```bash
-docker run -d --name mongo `
-  -p 27017:27017 `
-  -e MONGO_INITDB_ROOT_USERNAME=admin `
-  -e MONGO_INITDB_ROOT_PASSWORD=secret `
-  -v C:\mongo-data:/data/db `
-  mongo:latest
+docker run -d --name mongo -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=secret -v C:\mongo-data:/data/db mongo:latest
 ```
 
 macOS
 
 ```bash
-docker run -d --name mongo \
-  -p 27017:27017 \
-  -e MONGO_INITDB_ROOT_USERNAME=admin \
-  -e MONGO_INITDB_ROOT_PASSWORD=secret \
-  -v ~/mongo-data:/data/db \
-  mongo:latest
+docker run -d --name mongo -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=secret -v ~/mongo-data:/data/db mongo:latest
 ```
 
 4. Настройка окружения (.env файл)
