@@ -135,3 +135,19 @@ docker logs mongo
 docker stop minio mongo
 docker rm minio mongo
 ```
+
+9. Проверка через веб-интерфейсы
+
+## MinIO Console: `http://localhost:9001`
+
+Логин: `myadmin`
+Пароль: `mysecretpassword`
+Swagger UI: `http://localhost:8080/swagger/index.html`
+
+## MongoDB Compass:
+
+Hostname: `localhost`
+Port: `27017`
+Username: `admin`
+Password: `secret`
+Authentication Database: `admin`
