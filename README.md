@@ -145,15 +145,9 @@ docker rm minio mongo
 
 ### Swagger UI: `http://localhost:8080/swagger/index.html`
 
-    ```bash
-    Available authorizations
-
-    ApiKeyAuth (apiKey)
-
-    Name: Authorization
-    In: header
-    Value: `secure-api-key-123`
-    ```
+Available authorizations
+ApiKeyAuth (apiKey)
+Value:`secure-api-key-123`
 
 ## MongoDB Compass:
 
