@@ -15,7 +15,7 @@
 3. Запустить:
 
 ```bash
-go run cmd/server/main.go
+go run main.go
 ```
 
 Вот полный набор команд для запуска проекта:
@@ -102,7 +102,7 @@ go mod tidy
 6. Generate Swager
 
 ```bash
-$(go env GOPATH)/bin/swag init                   
+$(go env GOPATH)/bin/swag init
 $(go env GOPATH)/bin/swag init cmd/server/main.go
 ```
 
