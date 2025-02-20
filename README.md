@@ -142,7 +142,18 @@ docker rm minio mongo
 
 Логин: `myadmin`
 Пароль: `mysecretpassword`
-Swagger UI: `http://localhost:8080/swagger/index.html`
+
+### Swagger UI: `http://localhost:8080/swagger/index.html`
+
+    ```bash
+    Available authorizations
+
+    ApiKeyAuth (apiKey)
+
+    Name: Authorization
+    In: header
+    Value: `secure-api-key-123`
+    ```
 
 ## MongoDB Compass:
 
